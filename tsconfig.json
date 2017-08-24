@@ -1,0 +1,14 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "module": "amd",
+    "target": "es5",
+    "sourceMap": true
+  },
+  "files": [
+    "src/js/main/main.ts",
+    "src/lib/typings/typings.d.ts",
+    "src/js/webgis/extend/TDT/TDTLayer.ts",
+    "src/js/main/main_addaddv.ts"
+  ]
+}
