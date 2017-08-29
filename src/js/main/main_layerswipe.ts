@@ -57,13 +57,13 @@ map.addLayer(tdtVecLyr);
 //map.addLayer(tdtImgLyr);
 map.addLayer(addvLayer);
 
-var layerIds:string[]=map.layerIds;
+//var layerIds:string[]=map.layerIds;
 
 
 var layerSwipe=new LayerSwipe({
     type:"vertical",
     top:250,
     map:map,
-    layers:[tdtImgLyr]
+    layers:[addvLayer]
 },"swipeDiv");
 layerSwipe.startup();

@@ -1,13 +1,8 @@
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
+var __extends = (this && this.__extends) || function (d, b) {
+    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+};
 define(["require", "exports", "esri/layers/TiledMapServiceLayer", "esri/SpatialReference", "esri/geometry/Extent", "esri/layers/TileInfo"], function (require, exports, TiledMapServiceLayer, SpatialReference, Extent, TileInfo) {
     "use strict";
     var cornerCoordinate = 20037508.3427892;
@@ -20,27 +15,26 @@ define(["require", "exports", "esri/layers/TiledMapServiceLayer", "esri/SpatialR
             if (type === void 0) { type = "img"; }
             if (baseAnnoName === void 0) { baseAnnoName = ""; }
             if (typeMatrixSet === void 0) { typeMatrixSet = "c"; }
-            var _this = 
             //调用TiledMapServiceLayer的构造函数
-            _super.call(this) || this;
+            _super.call(this);
             //标识地图类型
-            _this._type = ""; //"ano","img","vec","ter"
-            _this._baseAnnoName = ""; //"cva","cia","cta"
-            _this._typeMatrixSet = ""; //"c","w"
+            this._type = ""; //"ano","img","vec","ter"
+            this._baseAnnoName = ""; //"cva","cia","cta"
+            this._typeMatrixSet = ""; //"c","w"
             //定义切片矩阵标识符
             //将标识图像类型（标注、电子地图、卫星影像、地形图）的参数传递给扩展的地图类型
-            _this._type = type;
-            _this._baseAnnoName = baseAnnoName;
-            _this._typeMatrixSet = typeMatrixSet;
+            this._type = type;
+            this._baseAnnoName = baseAnnoName;
+            this._typeMatrixSet = typeMatrixSet;
             //this.baseUrl = 'http://t0.tianditu.com/';
             //不同切片矩阵的坐标系不一样
-            _this.spatialReference = typeMatrixSet == 'w' ? new SpatialReference({ wkid: 102100 }) : new SpatialReference({ wkid: GCS2000 });
+            this.spatialReference = typeMatrixSet == 'w' ? new SpatialReference({ wkid: 102100 }) : new SpatialReference({ wkid: GCS2000 });
             //不同切片矩阵的地图范围不同
-            var extent = typeMatrixSet == 'w' ? new Extent(-cornerCoordinate, -cornerCoordinate, cornerCoordinate, cornerCoordinate, _this.spatialReference) : new Extent(-180, -90, 180, 90, _this.spatialReference);
+            var extent = typeMatrixSet == 'w' ? new Extent(-cornerCoordinate, -cornerCoordinate, cornerCoordinate, cornerCoordinate, this.spatialReference) : new Extent(-180, -90, 180, 90, this.spatialReference);
             //定义初始化范围
-            _this.initialExtent = (_this.fullExtent = extent);
+            this.initialExtent = (this.fullExtent = extent);
             //定义天地图切片信息
-            _this.tileInfo = new TileInfo({
+            this.tileInfo = new TileInfo({
                 "rows": 256,
                 "cols": 256,
                 "compressionQuality": 0,
@@ -100,9 +94,8 @@ define(["require", "exports", "esri/layers/TiledMapServiceLayer", "esri/SpatialR
                     { "level": 20, "resolution": 1.341104507425e-6, "scale": 564.2497166720688 }
                 ]
             });
-            _this.loaded = true;
-            _this.onLoad(_this);
-            return _this;
+            this.loaded = true;
+            this.onLoad(this);
         }
         TDTLayer.prototype.getTileUrl = function (level, row, col) {
             var tileUrl;

@@ -1,7 +1,6 @@
 ///<reference path="../../lib/typings/typings.d.ts"/>
 define(["require", "exports", "esri/map", "esri/SpatialReference", "esri/geometry/Point", "../webgis/extend/TDT/TDTLayer", "esri/layers/ArcGISDynamicMapServiceLayer", "esri/dijit/HomeButton"], function (require, exports, Map, SpatialReference, EsriPoint, TDTLayer, ArcGISDynamicMapServiceLayer, HomeButton) {
     "use strict";
-    Object.defineProperty(exports, "__esModule", { value: true });
     //定义坐标系和中心点常量
     var SR = new SpatialReference({ wkid: 4490 });
     var centerPoint = new EsriPoint(121.2, 28.9, SR);
