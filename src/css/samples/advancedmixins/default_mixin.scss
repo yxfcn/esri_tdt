@@ -1,0 +1,10 @@
+@mixin dropdown($background:#333,$width:200px,$opacity:null){
+  background:$background;
+  width:$width;
+  opacity: $opacity;
+  padding:10px 20px;
+
+}
+.header-munu{
+  @include  dropdown($width);
+}

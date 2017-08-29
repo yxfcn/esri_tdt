@@ -1,0 +1,9 @@
+.flat-button {
+  background: green;
+  border: 2px solid #001a00; }
+
+.floating-button {
+  background: red;
+  box-shadow: 1px 0px 0px #999; }
+
+/*# sourceMappingURL=atif_mixin.css.map */

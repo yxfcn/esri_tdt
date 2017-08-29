@@ -6,7 +6,8 @@ import EsriPoint = require("esri/geometry/Point");
 import TDTLayer=require("../webgis/extend/TDT/TDTLayer");
 import ArcGISDynamicMapServiceLayer=require("esri/layers/ArcGISDynamicMapServiceLayer");
 import HomeButton=require("esri/dijit/HomeButton");
-import dom=require("dojo/dom");
+
+
 
 //定义坐标系和中心点常量
 const SR = new SpatialReference({wkid: 4490});
@@ -34,6 +35,7 @@ var addvLayer=new ArcGISDynamicMapServiceLayer("http://192.168.2.188:6080/arcgis
 map.addLayer(tdtImgLyr);
 //添加行政区划图层
 map.addLayer(addvLayer);
+
 
 
 

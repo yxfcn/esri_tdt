@@ -1,0 +1,15 @@
+@mixin button($background,$shadow:null){
+  background: $background;
+  @if $shadow==null{
+    border:2px solid darken($background,20%);
+  }@else{
+    box-shadow:$shadow;
+  }
+}
+
+.flat-button{
+  @include button(green);
+}
+.floating-button{
+  @include button(red,1px 0px 0px #999);
+}

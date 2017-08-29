@@ -1,0 +1,5 @@
+@mixin notice-box($background,$width){
+  background:$background;
+  border:1px solid darken($background,20%);
+  width:$width;
+}

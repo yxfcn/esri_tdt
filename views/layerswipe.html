@@ -1,0 +1,41 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no"/>
+    <title>Layer List Dijit</title>
+    <style>
+        html, body, #map {
+            padding: 0;
+            margin: 0;
+            height: 100%;
+            position: relative;
+        }
+
+    </style>
+    <link rel="stylesheet" href="http://localhost:8080/arcgis_js_api/3.21/3.21/dijit/themes/calcite/dijit/calcite.css">
+    <link rel="stylesheet" href="http://localhost:8080/arcgis_js_api/3.21/3.21/esri/css/esri.css">
+    <script>
+        var locationPath = location.pathname.replace(/\/[^\/]+$/, "");
+        var rootPath = locationPath.substr(0, locationPath.substr(1).indexOf("/") + 1);
+
+        window.dojoConfig = {
+            parseOnLoad: true,
+            deps: ["js/main/main_layerswipe"],
+            packages: [
+                {
+                    name: "js",
+                    location: rootPath + "/src/js"
+                }
+            ]
+        };
+
+    </script>
+    <script src="http://localhost:8080/arcgis_js_api/3.21/3.21/init.js"></script>
+
+</head>
+<body class="calcite">
+<div id="map" class="map">
+    <div id="swipeDiv"></div>
+</div>
+</body>
+</html>

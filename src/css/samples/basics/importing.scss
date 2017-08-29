@@ -1,0 +1,23 @@
+@import "buttons";
+@import "header";
+
+$color: "green" !default;
+$header-background:#EEE;
+$link-color:#369;
+$menu-width:300px;
+
+header{
+  background:$header-background;
+  .menu{
+    width:$menu-width;
+    background:white;
+
+    a{
+      color:$link-color;
+    }
+  }
+}
+
+
+
+

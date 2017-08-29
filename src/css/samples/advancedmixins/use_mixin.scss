@@ -1,0 +1,11 @@
+@import "create_mixin";
+
+//pass in the arguments in the order of they are defined
+.warning{
+  @include notice-box(red,100%);
+
+}
+//keyword arguments
+.welcome{
+  @include notice-box($width:300px,$background:green);
+}

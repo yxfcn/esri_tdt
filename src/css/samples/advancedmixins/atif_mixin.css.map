@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AASA,YAAY;EARV,UAAU,EASM,KAAK;EAPnB,MAAM,EAAC,iBAAiC;;AAS5C,gBAAgB;EAXd,UAAU,EAYM,GAAG;EARjB,UAAU,EAQQ,gBAAgB",
+"sources": ["atif_mixin.scss"],
+"names": [],
+"file": "atif_mixin.css"
+}

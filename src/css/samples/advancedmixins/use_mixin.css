@@ -1,0 +1,11 @@
+.warning {
+  background: red;
+  border: 1px solid #990000;
+  width: 100%; }
+
+.welcome {
+  background: green;
+  border: 1px solid #001a00;
+  width: 300px; }
+
+/*# sourceMappingURL=use_mixin.css.map */

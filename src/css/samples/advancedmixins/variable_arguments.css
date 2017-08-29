@@ -1,0 +1,73 @@
+/*
+Error: Undefined mixin 'rainwbow'.
+        on line 6 of variable_arguments.scss, in `rainwbow'
+        from line 6 of variable_arguments.scss
+
+1: @mixin rainbow($color...){
+2:   background:linear-gradient($color);
+3: }
+4: 
+5: .warm-rawbow{
+6:   @include rainwbow(red,orange,yellow);
+7: }
+8: .full-rainbow{
+9:   @include rainbow(red,orange,yellow,green,blue,purple);
+10: }
+
+Backtrace:
+variable_arguments.scss:6:in `rainwbow'
+variable_arguments.scss:6
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:352:in `block in visit_mixin'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/stack.rb:98:in `block in with_mixin'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/stack.rb:135:in `with_frame'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/stack.rb:98:in `with_mixin'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:350:in `visit_mixin'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:36:in `visit'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/stack.rb:79:in `block in with_base'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/stack.rb:135:in `with_frame'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/stack.rb:79:in `with_base'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:162:in `visit'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:444:in `map'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:36:in `visit'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/stack.rb:79:in `block in with_base'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/stack.rb:135:in `with_frame'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/stack.rb:79:in `with_base'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:162:in `visit'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:52:in `map'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:36:in `visit'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:161:in `visit'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:10:in `visit'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/tree/root_node.rb:36:in `css_tree'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/engine.rb:307:in `render_with_sourcemap'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/plugin/compiler.rb:209:in `each'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/plugin.rb:82:in `update_stylesheets'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/exec/sass_scss.rb:340:in `watch_or_update'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/exec/sass_scss.rb:51:in `process_result'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/exec/base.rb:52:in `parse'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/exec/base.rb:19:in `parse!'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/bin/scss:13:in `<top (required)>'
+D:/Ruby24-x64/bin/scss:22:in `load'
+D:/Ruby24-x64/bin/scss:22:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined mixin 'rainwbow'.\A         on line 6 of variable_arguments.scss, in `rainwbow'\A         from line 6 of variable_arguments.scss\A \A 1: @mixin rainbow($color...){\A 2:   background:linear-gradient($color);\A 3: }\A 4: \A 5: .warm-rawbow{\A 6:   @include rainwbow(red,orange,yellow);\A 7: }\A 8: .full-rainbow{\A 9:   @include rainbow(red,orange,yellow,green,blue,purple);\A 10: }"; }

@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Generated files" type="javaScript">
+    <properties>
+      <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/src/js/main/main_layerlist.js" />
+        <item url="file://$PROJECT_DIR$/src/js/main/main_layerswipe.js" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/src/js/main/main_layerlist.js" />
+      <root url="file://$PROJECT_DIR$/src/js/main/main_layerswipe.js" />
+    </CLASSES>
+    <SOURCES />
+  </library>
+</component>
