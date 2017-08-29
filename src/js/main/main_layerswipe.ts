@@ -1,5 +1,15 @@
 ///<reference path="../../lib/typings/typings.d.ts"/>
 
+/*关于图层的卷帘效果
+1. 适用于矢量图层（动态图层），对于切片或瓦片图无效
+2. 在var layerSwipe=new LayerSwipe({
+    type:"vertical",
+    top:250,
+    map:map,
+    layers:[addvLayer]
+},"swipeDiv");中，layers:[addvLayer]是"帘子"
+* */
+
 import Map=require("esri/map");
 import SpatialReference=require("esri/SpatialReference");
 import EsriPoint = require("esri/geometry/Point");
