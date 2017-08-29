@@ -35,17 +35,19 @@ define(["require", "exports", "esri/map", "esri/SpatialReference", "esri/geometr
     var tdtVecLyr = new TDTLayer("vec");
     //创建行政区划图层
     var addvLayer = new ArcGISDynamicMapServiceLayer("http://192.168.2.188:6080/arcgis/rest/services/ZJ_TZ_LH_ADDV_TOWN/MapServer");
-    //
+    //创建河流图层
+    var rvLayer = new ArcGISDynamicMapServiceLayer("http://192.168.2.188:6080/arcgis/rest/services/ZJ_TZ_LH_RIVER_TOWN/MapServer");
     //添加天地图图层
     map.addLayer(tdtVecLyr);
     //map.addLayer(tdtImgLyr);
+    map.addLayer(rvLayer);
     map.addLayer(addvLayer);
     //var layerIds:string[]=map.layerIds;
     var layerSwipe = new LayerSwipe({
         type: "vertical",
         top: 250,
         map: map,
-        layers: [addvLayer]
+        layers: [rvLayer]
     }, "swipeDiv");
     layerSwipe.startup();
 });
