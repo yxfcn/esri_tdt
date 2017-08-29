@@ -60,8 +60,8 @@ var map = new Map("map", {
 var tdtImgLyr = new TDTLayer();
 var tdtVecLyr=new TDTLayer("vec");
 //创建行政区划图层
-var addvLayer = new ArcGISDynamicMapServiceLayer("http://60.191.132.130:6080/arcgis/rest/services/ZJ_TZ_LH_ADDV_TOWN/MapServer");
-
+var addvLayer = new ArcGISDynamicMapServiceLayer("http://192.168.2.188:6080/arcgis/rest/services/ZJ_TZ_LH_ADDV_TOWN/MapServer");
+//
 //添加天地图图层
 map.addLayer(tdtVecLyr);
 //map.addLayer(tdtImgLyr);
