@@ -11,6 +11,7 @@
     "src/js/webgis/extend/TDT/TDTLayer.ts",
     "src/js/main/main_addaddv.ts",
     "src/js/main/main_layerlist.ts",
-    "src/js/main/main_layerswipe.ts"
+    "src/js/main/main_layerswipe.ts",
+    "src/js/main/main_legend.ts"
   ]
 }

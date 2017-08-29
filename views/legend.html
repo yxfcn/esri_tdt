@@ -1,0 +1,72 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no"/>
+    <title>图例</title>
+    <style>
+        html, body, #map {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+
+        }
+        #rightPane {
+            width: 20%;
+        }
+
+        #legendPane {
+            border: solid #97DCF2 1px;
+        }
+
+    </style>
+    <link rel="stylesheet" href="http://localhost:8080/arcgis_js_api/3.21/3.21/dijit/themes/claro/claro.css">
+    <link rel="stylesheet" href="http://localhost:8080/arcgis_js_api/3.21/3.21/esri/css/esri.css">
+    <script>
+        var locationPath = location.pathname.replace(/\/[^\/]+$/, "");
+        var rootPath = locationPath.substr(0, locationPath.substr(1).indexOf("/") + 1);
+
+        window.dojoConfig = {
+            parseOnLoad: true,
+            deps: ["js/main/main_legend"],
+            packages: [
+                {
+                    name: "js",
+                    location: rootPath + "/src/js"
+                }
+            ]
+        };
+
+    </script>
+    <script src="http://localhost:8080/arcgis_js_api/3.21/3.21/init.js"></script>
+
+</head>
+<body class="claro">
+<div id="content"
+     data-dojo-type="dijit/layout/BorderContainer"
+     data-dojo-props="design:'headline', gutters:true"
+     style="width: 100%; height: 100%; margin: 0;">
+
+    <div id="rightPane"
+         data-dojo-type="dijit/layout/ContentPane"
+         data-dojo-props="region:'right'">
+
+        <div data-dojo-type="dijit/layout/AccordionContainer">
+            <div data-dojo-type="dijit/layout/ContentPane" id="legendPane"
+                 data-dojo-props="title:'图例', selected:true">
+                <div id="legendDiv"></div>
+            </div>
+            <div data-dojo-type="dijit/layout/ContentPane"
+                 data-dojo-props="title:'面板 2'">
+                This pane could contain tools or additional content
+            </div>
+        </div>
+    </div>
+    <div id="map"
+         data-dojo-type="dijit/layout/ContentPane"
+         data-dojo-props="region:'center'"
+         style="overflow:hidden;">
+    </div>
+</div>
+
+</body>
+</html>
