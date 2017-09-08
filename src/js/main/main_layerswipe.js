@@ -1,6 +1,7 @@
 ///<reference path="../../lib/typings/typings.d.ts"/>
 define(["require", "exports", "esri/map", "esri/SpatialReference", "esri/geometry/Point", "../webgis/extend/TDT/TDTLayer", "esri/layers/ArcGISDynamicMapServiceLayer", "esri/dijit/LayerSwipe"], function (require, exports, Map, SpatialReference, EsriPoint, TDTLayer, ArcGISDynamicMapServiceLayer, LayerSwipe) {
     "use strict";
+    Object.defineProperty(exports, "__esModule", { value: true });
     //利用for...of获取图层组的方法
     function getLayers(sourceMap) {
         var layers;

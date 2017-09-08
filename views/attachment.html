@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" charset="UTF-8"/>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no"/>
+    <title>attachment</title>
+    <link rel="stylesheet" href="http://localhost:8080/arcgis_js_api/3.21/3.21/esri/css/esri.css"/>
+    <style>
+        html, body {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #map {
+            height: 2em;
+            text-align: center;
+            font-size: 1.1em;
+            pading: 0.5em;
+        }
+
+        .dj_ie .infowindow .window .top .right .user .content {
+            position: relative;
+        }
+
+        .dj_ie .simpleInfoWindow .content {
+            position: relative;
+        }
+    </style>
+    <script>
+        var locationPath = location.pathname.replace(/\/[^\/]+$/, "");
+        var rootPath = locationPath.substr(0, locationPath.substr(1).indexOf("/") + 1);
+        window.dojoConfig = {
+            parseOnLoad:true,
+            deps:["main/main_attachment"],
+            packages: [{
+                name:"main",
+                location:rootPath+"/src/js/main"
+            }]
+        };
+
+    </script>
+
+</head>
+<body>
+<div data-dojo-type="dijit/layout/BorderContainer"
+     data-dojo-props="design:'headline'"
+     style="width:100%;height:100%;">
+
+    <div id="map"
+         data-dojo-type="dijit/layout/ContentPane"
+         data-dojo-props="region:'center'"></div>
+
+    <div id="footer"
+         data-dojo-type="dijit/layout/ContentPane"
+         data-dojo-props="region:'bottom'">
+        Click point to view/create/delete attachments.
+    </div>
+</div>
+
+
+<script src="http://localhost:8080/arcgis_js_api/3.21/3.21/init.js"></script>
+
+</body>
+</html>

@@ -12,6 +12,7 @@
     "src/js/main/main_addaddv.ts",
     "src/js/main/main_layerlist.ts",
     "src/js/main/main_layerswipe.ts",
-    "src/js/main/main_legend.ts"
+    "src/js/main/main_legend.ts",
+    "src/js/main/main_attachment.ts"
   ]
 }
